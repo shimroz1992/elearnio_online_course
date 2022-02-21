@@ -26,13 +26,14 @@ $ rspec
 
 ```
 
-* Api with request and response
+#### Api with request and response
   
   * Create Author
 
     * POST localhost:3000/users with parameter name and user-type author as shown in example 
 
-      Ex Request: curl --location --request POST 'localhost:3000/users' \
+      * Ex Request: 
+         curl --location --request POST 'localhost:3000/users' \
           --header 'Content-Type: application/vnd.api+json' \
           --header 'Accept: application/vnd.api+json' \
           --data-raw ' {
@@ -44,7 +45,7 @@ $ rspec
                       }
                   }
               }
-      Response:
+      * Response:
         {
           "data": {
               "id": "11",
@@ -77,7 +78,8 @@ $ rspec
 
     * POST localhost:3000/users with parameter name and user-type talent as shown in example
 
-      Ex Request: 
+      * Ex Request: 
+
         curl --location --request POST 'localhost:3000/users' \
         --header 'Content-Type: application/vnd.api+json' \
         --header 'Accept: application/vnd.api+json' \
@@ -90,7 +92,9 @@ $ rspec
                 }
             }
         }
-      Response:
+
+      * Response:
+
         {
           "data": {
               "id": "6",
@@ -123,7 +127,7 @@ $ rspec
 
     * POST localhost:3000/course with parameter author in body as shows in example
       
-      Ex Request:
+      * Ex Request:
 
       curl --location --request POST 'localhost:3000/courses' \
       --header 'Accept: application/vnd.api+json' \
@@ -146,7 +150,8 @@ $ rspec
           }
       }
 
-      Response:
+      * Response:
+
       {
         "data": {
             "id": "6",
@@ -186,7 +191,7 @@ $ rspec
   
     * POST localhost:3000/enrollments  to enroll talent to course with user_id and course_id
 
-      Ex Request:
+      * Ex Request:
 
       curl --location --request POST 'localhost:3000/enrollments' \
       --header 'Content-Type: application/vnd.api+json' \
@@ -201,7 +206,7 @@ $ rspec
           }
       }
 
-      Response:
+      * Response:
 
       {
         "data": {
@@ -235,7 +240,7 @@ $ rspec
    
     * DELETE  localhost:3000/users/:user_id to destroy author, then courses of that author will transfer to other  author
 
-    Ex Request:
+    * Ex Request:
 
       curl --location --request DELETE 'localhost:3000/users/9' \
       --header 'Accept: application/vnd.api+json' \
@@ -246,7 +251,7 @@ $ rspec
 
     * GET localhost:3000/users?filter[user-type]=author get all authors
 
-    Ex Request: 
+    * Ex Request: 
       curl --location -g --request GET 'localhost:3000/users?filter[user-type]=author' \  
       --header 'Accept: application/vnd.api+json' \
       --header 'Content-Type: application/vnd.api+json' \   
@@ -255,7 +260,7 @@ $ rspec
 
     * GET localhost:3000/users?filter[user-type]=author get all authors
 
-    Ex Request: 
+    * Ex Request: 
       curl --location -g --request GET 'localhost:3000/users?filter[user-type]=talent' \  
       --header 'Accept: application/vnd.api+json' \
       --header 'Content-Type: application/vnd.api+json' \   
@@ -264,7 +269,7 @@ $ rspec
 
     * GET localhost:3000/courses get all courses
 
-    Ex Request: 
+    * Ex Request: 
       curl --location --request GET 'localhost:3000/courses' \
       --header 'Accept: application/vnd.api+json' \
       --header 'Content-Type: application/vnd.api+json' \    
@@ -273,7 +278,7 @@ $ rspec
 
     * GET localhost:3000/courses/1 get a course details
 
-    Ex Request: 
+    * Ex Request: 
       curl --location --request GET 'localhost:3000/courses' \
       --header 'Accept: application/vnd.api+json' \
       --header 'Content-Type: application/vnd.api+json' \      
