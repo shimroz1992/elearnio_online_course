@@ -19,4 +19,10 @@ Rails app:
 ```
   $ rails s -p 3000 
 ```
+### Running Test
+
+```
+$ rspec
+
+```
 
